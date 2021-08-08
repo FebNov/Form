@@ -14,10 +14,8 @@ const useSendGrid = (formData) => {
     try {
       await sgMail.send(msg);
     } catch (error) {
-      console.log('123321');
-      console.error(error);
       if (error.response) {
-        console.error(error.response.body);
+        console.log(error.response);
       }
     }
   })();
